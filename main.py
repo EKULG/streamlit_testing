@@ -27,8 +27,6 @@ class VideoProcessor(VideoProcessorBase):
                 img_container["frames"].append(img)
 
 
-# var = MediaRecorder("record.mp3")
-
 webrtc_streamer(
             key="object-detection",
             # video_frame_callback=VideoProcessor.video_frame_callback,
@@ -37,7 +35,7 @@ webrtc_streamer(
                 "audio": True
             },
             desired_playing_state=True #link to Start/Stop button
-            # , in_recorder_factory=var
+            # , in_recorder_factory= MediaRecorder("record.mp3")
             , video_html_attrs = VideoHTMLAttributes(muted=True, volume=0, autoPlay=True, controls=False, stop=False #unabling the user to control video input
                                                     #,style={"border": "5px red solid", "margin": "0 auto", "width":"50%"}
                                                     )
