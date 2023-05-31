@@ -12,9 +12,17 @@ def main():
     # Set Streamlit app title
     st.title("WebRTC Streamlit Example")
 
+    # Set the STUN server information
+    rtc_configuration = {
+        "iceServers": [
+            {"urls": ["stun:stun.example.com:3478"]}
+        ]
+    }
+
     # Establish the WebRTC connection and display the video stream
-    webrtc_streamer(key="example", video_transformer_factory=VideoTransformer)
+    webrtc_streamer(key="example", video_transformer_factory=VideoTransformer, rtc_configuration=rtc_configuration)
 
 if __name__ == "__main__":
     # Run the Streamlit app
     main()
+
