@@ -16,7 +16,7 @@ def main():
     rtc_configuration = {
         "iceServers": [
             {"urls": ["stun:stun.l.google.com:19302"]},
-            {"urls": ["turn:64.233.165.127:19305?transport=udp"]}
+            {"urls": ["turn:83.110.1.198:3478?transport=udp"], "username": "luke", "credential": "password123"}
         ]
     }
 
