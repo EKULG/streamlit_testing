@@ -1,5 +1,5 @@
 from streamlit_webrtc import WebRtcMode, webrtc_streamer
-from sample_utils.turn import get_ice_servers
+from turn import get_ice_servers
 
 
 
